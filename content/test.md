@@ -2,15 +2,13 @@
 ---
 title: "Min fina titel"
 ---
-Min me-sida i kursen design
+Min testsida
 =========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`.
-
-[FIGURE src="image/big-picture.jpg?w=500" class="right" caption="Bild på mig och mina barn"]
-
-Andreas heter jag, bor tillsammans med min Fru och mina underbara barn i Göteborg. Jag har ett stort teknikintresse och älskar att lära mig nya saker. 
-När jag inte är med min familj eller leker med mina tekniksaker så tittar jag på ishockey. Antingen tar jag mig till Scandinavium för att se Indianerna på plats eller så sätter jag mig framför datorn. Spelar inte så mycket spel men när jag spelar så är det NHL som gäller!
+```
+Här testar jag saker kolla vilken lång text jag har gjort. 
+Jag är riktigt bra på att skriva långa texter.
+```
 
 ---
 views:
@@ -22,4 +20,22 @@ views:
             meta:
                 type: single
                 route: block/byline
+                
+
+    lol:
+        region: sidebar-left
+        template: anax/v2/block/default
+        sort: 3
+        data:
+            meta:
+                type: single
+                route: block/test-left
+                
+    redovisa:
+        region: sidebar-right
+        template: anax/v2/block/default
+        data:
+            meta: 
+                type: single
+                route: block/om-redovisa
 ---

@@ -1,3 +1,10 @@
-#### Redovisa på GitHub
+<div class="byline">
+    <div class="photo-holder">
+        <img src="img/addepadde.jpg" alt="En bild på mig" />
+        <br /> Andreas
+    </div>
+    <div class="presentation">
+        Andreas går en kurs i webbutveckling på Blekinges Tekniska Högskola. När han inte studerar så spenderar han tid med familjen.
+    </div>
 
-Skriv något kort om ditt redovisa-repo och länka till [repot för me/redovisa på GitHub](XXX).
+</div>

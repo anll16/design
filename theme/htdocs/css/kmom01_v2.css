@@ -1,0 +1,310 @@
+/*!
+ * LESS version of the stylesheet for design kmom01.
+ *
+ * This stylesheet is for the design course and kmom01. Its intention is to
+ * use kmom01.css and lessify the style and use this as a wrapper for the new
+ * style.
+ */
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+/*!
+ * Stylesheet for design kmom01.
+ *
+ * This stylesheet is for the design course and kmom01. Fill it with style
+ * to style up the website so it is useable.
+ */
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+  display: none;
+}
+/* Hide responsive/mobile menu, leave this to kmom02 */
+.rm-navbar-max {
+  display: none;
+}
+.rm-submenu-button {
+  display: none;
+}
+.footer-column-wrapper {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  background-color: Gray;
+}
+.footer-column-wrapper .footer-column {
+  display: table-cell;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+.byline {
+  border: 1px dashed black;
+  width: 400px;
+  padding: 5px;
+  display: flex;
+}
+.byline > .photo-holder {
+  width: 20%;
+  font-style: italic;
+}
+.byline > .presentation {
+  vertical-align: top;
+  width: 80%;
+  padding-left: 5px;
+}
+.photo-holder > img {
+  width: 100%;
+}
+/**
+ * Style for the stylechooser.
+ */
+/**
+ * Variables
+ */
+/**
+ * Style
+ */
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+html {
+  overflow-y: scroll;
+  background-color: #424242;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+  font: 100.01%/1 serif;
+}
+img {
+  max-width: 100%;
+}
+form {
+  max-width: 100%;
+}
+select {
+  max-width: 100%;
+}
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+/**
+ * Variables
+ */
+/**
+ * General layout
+ */
+.inner-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.inner-wrap-main {
+  min-height: 600px;
+}
+.rm-navbar {
+  background-color: #e37222;
+}
+/*
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+  display: none;
+}
+/* Hide responsive/mobile menu, leave this to kmom02
+.rm-navbar-max {
+    display: none;
+}
+*/
+@media (min-width: 500px) {
+  .rm-navbar-max {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .rm-desktop {
+    display: none;
+  }
+}
+.region-flash img {
+  width: 100%;
+}
+/**
+ *  Footer
+ */
+.outer-wrap-footer {
+  background-color: #07889b;
+}
+.outer-wrap-footer .inner-wrap-footer .footer-column-wrapper {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.outer-wrap-footer .inner-wrap-footer .footer-column-wrapper .footer-column {
+  display: table-cell;
+}
+.inner-wrap-main .row {
+  display: grid;
+  grid-template-rows: 7fr;
+  grid-template-columns: 3fr 4fr 3fr;
+  grid-template-areas: "left main right";
+  grid-gap: 0.75em;
+  grid-auto-flow: column;
+}
+.inner-wrap-main .row .region-sidebar-left {
+  grid-column-start: left;
+}
+.inner-wrap-main .row .region-sidebar-right {
+  grid-column-start: right;
+}
+@media (min-width: 768px) {
+  .inner-wrap-main .row main {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+  }
+  .inner-wrap-main .row main.has-sidebar-right {
+    grid-column-start: span 2;
+  }
+  .inner-wrap-main .row main.has-sidebar-left {
+    grid-column-start: 2;
+    grid-column-end: span 3;
+  }
+  .inner-wrap-main .row main.has-sidebar-right.has-sidebar-left {
+    grid-column: main;
+  }
+}
+@media (max-width: 768px) {
+  .inner-wrap-main .row {
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-areas: "left left left" "main main main" "right right right";
+    grid-gap: 0.75em;
+  }
+  .inner-wrap-main .row main {
+    max-width: 100%;
+    grid-column: main;
+  }
+}
+nav.breadcrumb-list {
+  /* Style the list */
+  /* Display list items side by side */
+  /* Add a slash symbol (/) before/behind each list item */
+  /* Add a color to all links inside the list */
+  /* Add a color on mouse-over */
+}
+nav.breadcrumb-list ul {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+nav.breadcrumb-list ul li {
+  display: inline;
+  font-size: 18px;
+}
+nav.breadcrumb-list ul li + li:before {
+  padding: 8px;
+  color: black;
+  content: ">";
+}
+nav.breadcrumb-list ul li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+nav.breadcrumb-list ul li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+/**
+ * Byline
+ */
+.byline {
+  border: 1px dashed black;
+  width: 400px;
+  padding: 5px;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .byline {
+    width: 96%;
+  }
+}
+.byline > .photo-holder {
+  width: 20%;
+  font-style: italic;
+}
+.byline > .presentation {
+  vertical-align: top;
+  width: 80%;
+  padding-left: 5px;
+}
+.photo-holder > img {
+  width: 100%;
+}
+/**
+ * Layout for responsive style through media queries.
+ */
+@media screen and (max-width: 1500px) {
+  .site-logo {
+    display: none;
+  }
+}
+/**
+ * Show off the regions used in the website, to ease styling.
+ */
+.regions .outer-wrap {
+  background-color: #f4e3c9;
+  border: 1px solid #e3b774;
+}
+.regions .inner-wrap {
+  background-color: #f4e0e9;
+  border: 1px solid #d995b4;
+}
+.regions .region-header-col-1,
+.regions .region-header-col-2,
+.regions .region-header-col-3,
+.regions .region-flash,
+.regions .region-breadcrumb,
+.regions .region-flash-message,
+.regions .region-columns-above,
+.regions .region-main,
+.regions .region-after-main,
+.regions .region-columns-below,
+.regions .region-sidebar-left,
+.regions .region-sidebar-right,
+.regions .region-footer,
+.regions .region-footer-column-1,
+.regions .region-footer-column-2,
+.regions .region-footer-column-3 {
+  background-color: #b5dce1;
+  border: 1px solid #6cbac4;
+  color: #111;
+}
+/**
+ * My own settings, not currently in their own module.
+ */

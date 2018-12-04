@@ -1,0 +1,210 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+
+/**
+ * General layout
+ */
+.inner-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.inner-wrap-main {
+    min-height: 600px;
+}
+
+.rm-navbar {
+    background-color: #e37222;
+}
+/*
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+    display: none;
+}
+
+
+/* Hide responsive/mobile menu, leave this to kmom02
+.rm-navbar-max {
+    display: none;
+}
+*/
+@media(min-width: 500px) {
+    .rm-navbar-max {
+        display: none;
+    }
+
+}
+@media (max-width: 500px) {
+    .rm-desktop {
+        display: none;
+    }
+}
+.region-flash {
+    img {
+        width: 100%;
+    }
+}
+
+/**
+ *  Footer
+ */
+
+
+
+.outer-wrap-footer {
+    background-color: #07889b;
+
+
+    .inner-wrap-footer {
+
+        .footer-column-wrapper {
+            display: table;
+            table-layout: fixed;
+            width:100%;
+
+
+
+
+            .footer-column {
+                display: table-cell;
+            }
+        }
+    }
+}
+
+
+.inner-wrap-main .row{
+
+
+    display: grid;
+    grid-template-rows: 7fr;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-areas:
+            "left main right";
+    grid-gap: .75em;
+    grid-auto-flow: column;
+
+    .region-sidebar-left {
+        grid-column-start: left;
+    }
+
+    .region-sidebar-right {
+        grid-column-start: right;
+    }
+
+    @media(min-width: 768px) {
+
+        main {
+            grid-column-start: 1;
+            grid-column-end: span 3;
+        }
+
+        main.has-sidebar-right {
+            grid-column-start: span 2;
+
+        }
+
+        main.has-sidebar-left {
+            grid-column-start: 2;
+            grid-column-end: span 3;
+
+        }
+
+        main.has-sidebar-right.has-sidebar-left {
+            grid-column: main;
+        }
+    }
+
+
+    @media(max-width: 768px){
+        grid-template-rows: auto;
+        grid-template-columns: 3fr 4fr 3fr;
+        grid-template-areas:
+                "left left left"
+    "main main main"
+    "right right right";
+
+        grid-gap: .75em;
+
+        main {
+            max-width: 100%;
+            grid-column: main;
+        }
+    }
+
+
+}
+
+nav.breadcrumb-list {
+    /* Style the list */
+    ul {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: #eee;
+    }
+
+    /* Display list items side by side */
+    ul li {
+        display: inline;
+        font-size: 18px;
+    }
+
+    /* Add a slash symbol (/) before/behind each list item */
+    ul li+li:before {
+        padding: 8px;
+        color: black;
+        content: ">";
+    }
+
+    /* Add a color to all links inside the list */
+    ul li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+    /* Add a color on mouse-over */
+    ul li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
+}
+
+/**
+ * Byline
+ */
+
+
+.byline {
+    border: 1px dashed black;
+    width: 400px;
+    padding: 5px;
+    display: flex;
+}
+
+@media(max-width: 500px) {
+    .byline {
+        width: 96%;
+    }
+}
+
+.byline > .photo-holder {
+    width: 20%;
+    font-style: italic;
+}
+
+.byline > .presentation {
+    vertical-align: top;
+    width: 80%;
+    padding-left: 5px;
+}
+
+.photo-holder > img {
+    width: 100%;
+}
